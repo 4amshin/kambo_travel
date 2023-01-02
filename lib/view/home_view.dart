@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kambo_travel/widget/search_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -44,41 +45,7 @@ class HomeView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              height: 45,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    offset: const Offset(5, 5),
-                    blurRadius: 8,
-                    spreadRadius: 4,
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const Icon(Icons.search),
-                    Text(
-                      "Enter your destination",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                    Icon(
-                      Icons.candlestick_chart_rounded,
-                      color: Colors.grey[400],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            const SearchWidget(),
           ],
         ),
       ),
