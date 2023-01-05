@@ -1,3 +1,4 @@
+import 'package:kambo_travel/state_util.dart';
 import 'package:flutter/material.dart';
 import 'package:kambo_travel/module/home/view/home_view.dart';
 import 'package:kambo_travel/test_site.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Kambo Travel',
+navigatorKey: Get.navigatorKey,
       theme: ThemeData(
         fontFamily: 'Poppins',
         useMaterial3: true,

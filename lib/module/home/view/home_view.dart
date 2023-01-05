@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:kambo_travel/model/place_model.dart';
+import 'package:kambo_travel/module/home/widget/home_bottom_navbar.dart';
 import 'package:kambo_travel/module/home/widget/home_category_item.dart';
 import 'package:kambo_travel/module/home/widget/home_tab_bar.dart';
 import 'package:kambo_travel/module/home/widget/home_tab_bar_view.dart';
@@ -32,6 +33,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
         title: const Text(
           'Kambo Travel',
           style: TextStyle(
+            fontSize: 20,
             color: Colors.black,
             fontWeight: FontWeight.w600,
           ),
@@ -59,8 +61,8 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               "Where do you want to go?",
               style: TextStyle(
                 height: 1,
-                fontSize: 28.0,
-                fontWeight: FontWeight.w700,
+                fontSize: 25,
+                fontWeight: FontWeight.w600,
               ),
             ),
             const SizedBox(height: 25),
@@ -122,6 +124,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           ],
         ),
       ),
+      bottomNavigationBar: const HomeBottomNavbar(),
     );
   }
 }
