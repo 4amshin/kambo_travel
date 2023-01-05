@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:kambo_travel/model/place_model.dart';
 import 'package:kambo_travel/widget/ka_item_container.dart';
+import 'package:kambo_travel/widget/ka_tabBar_view.dart';
 import 'package:kambo_travel/widget/search_widget.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
@@ -13,8 +17,10 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    Random random = Random();
+    touristItem.shuffle(random);
     TabController _tabController = TabController(
-      length: 5,
+      length: 6,
       vsync: this,
     );
     return Scaffold(
@@ -88,10 +94,11 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   ),
                   unselectedLabelColor: Colors.grey[400],
                   tabs: const [
+                    Tab(text: "Semua"),
                     Tab(text: "Cafe"),
+                    Tab(text: "Kedai"),
                     Tab(text: "Penginapan"),
                     Tab(text: "Camp"),
-                    Tab(text: "Kedai"),
                     Tab(text: "Taman"),
                   ],
                 ),
@@ -105,19 +112,24 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 controller: _tabController,
                 children: [
                   SizedBox(
-                    child: ListView(
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      children: const [
-                        KaItemContainer(color: Colors.amber),
-                        KaItemContainer(color: Colors.indigo),
-                        KaItemContainer(color: Colors.teal),
-                      ],
+                      itemCount: touristItem.length,
+                      itemBuilder: ((context, index) {
+                        TouristPlace item = touristItem[index];
+                        return KaItemContainer(
+                          color: item.color,
+                          title: item.placeName,
+                          category: item.placeCategory,
+                        );
+                      }),
                     ),
                   ),
-                  const Center(child: Text('Second')),
-                  const Center(child: Text('Third')),
-                  const Center(child: Text('Fourth')),
-                  const Center(child: Text('Fifth')),
+                  const KaTabBarView(category: 'Cafe'),
+                  const KaTabBarView(category: 'Kedai'),
+                  const KaTabBarView(category: 'Penginapan'),
+                  const KaTabBarView(category: 'Camp'),
+                  const KaTabBarView(category: 'Taman'),
                 ],
               ),
             ),

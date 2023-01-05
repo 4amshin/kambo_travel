@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class KaItemContainer extends StatelessWidget {
   final Color? color;
+  final String? title;
+  final String? category;
   const KaItemContainer({
     Key? key,
     required this.color,
+    required this.title,
+    required this.category,
   }) : super(key: key);
 
   @override
@@ -17,10 +21,10 @@ class KaItemContainer extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withOpacity(0.1),
             offset: const Offset(0, 7),
             blurRadius: 8,
-            spreadRadius: 4,
+            spreadRadius: 1,
           ),
         ],
       ),
@@ -33,9 +37,9 @@ class KaItemContainer extends StatelessWidget {
               color: color,
               boxShadow: [
                 BoxShadow(
-                  color: color!.withOpacity(0.4),
-                  offset: const Offset(0, 5),
-                  blurRadius: 6,
+                  color: Colors.grey.withOpacity(0.2),
+                  offset: const Offset(0, 3),
+                  blurRadius: 10,
                   spreadRadius: 1,
                 ),
               ],
@@ -43,7 +47,7 @@ class KaItemContainer extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 15,
+              horizontal: 20,
               vertical: 10,
             ),
             child: Row(
@@ -52,9 +56,9 @@ class KaItemContainer extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Pesona Kampong",
-                      style: TextStyle(
+                    Text(
+                      title ?? 'Nama Tempat',
+                      style: const TextStyle(
                         fontSize: 15,
                       ),
                     ),
@@ -68,7 +72,7 @@ class KaItemContainer extends StatelessWidget {
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          "Penginapan",
+                          category ?? 'Kategori Tempat',
                           style: TextStyle(
                             fontSize: 12,
                             color: Colors.grey[400],
