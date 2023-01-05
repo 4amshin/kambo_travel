@@ -24,7 +24,7 @@ List<TouristPlace> touristItem = [
     color: Colors.indigo,
   ),
   TouristPlace(
-    placeName: 'Cafe Mountain',
+    placeName: 'Mountain Cafe',
     placeCategory: 'Cafe',
     color: Colors.lightGreenAccent,
   ),

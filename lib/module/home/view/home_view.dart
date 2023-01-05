@@ -2,9 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:kambo_travel/model/place_model.dart';
-import 'package:kambo_travel/widget/ka_item_container.dart';
-import 'package:kambo_travel/widget/ka_tabBar_view.dart';
-import 'package:kambo_travel/widget/search_widget.dart';
+import 'package:kambo_travel/module/home/widget/home_category_item.dart';
+import 'package:kambo_travel/module/home/widget/home_tab_bar.dart';
+import 'package:kambo_travel/module/home/widget/home_tab_bar_view.dart';
+import 'package:kambo_travel/module/home/widget/recomended_list_place.dart';
+import 'package:kambo_travel/module/home/widget/search_widget.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomeView extends StatefulWidget {
@@ -75,39 +77,14 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               height: 40,
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: TabBar(
+                child: HomeTabBar(
                   controller: _tabController,
-                  isScrollable: true,
-                  // indicatorSize: TabBarIndicatorSize.label,
-                  // indicatorWeight: 3,
-                  indicator: DotIndicator(
-                    color: Colors.indigo,
-                    distanceFromCenter: 15,
-                    radius: 3,
-                    paintingStyle: PaintingStyle.fill,
-                  ),
-                  physics: const BouncingScrollPhysics(),
-                  labelColor: Colors.indigo,
-                  indicatorColor: Colors.indigo,
-                  labelStyle: const TextStyle(
-                    fontWeight: FontWeight.w500,
-                  ),
-                  unselectedLabelColor: Colors.grey[400],
-                  tabs: const [
-                    Tab(text: "Semua"),
-                    Tab(text: "Cafe"),
-                    Tab(text: "Kedai"),
-                    Tab(text: "Penginapan"),
-                    Tab(text: "Camp"),
-                    Tab(text: "Taman"),
-                  ],
                 ),
               ),
             ),
             const SizedBox(height: 15),
             SizedBox(
               height: 290,
-              // color: Colors.red,
               child: TabBarView(
                 controller: _tabController,
                 children: [
@@ -117,7 +94,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       itemCount: touristItem.length,
                       itemBuilder: ((context, index) {
                         TouristPlace item = touristItem[index];
-                        return KaItemContainer(
+                        return HomeCategoryItem(
                           color: item.color,
                           title: item.placeName,
                           category: item.placeCategory,
@@ -125,14 +102,23 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       }),
                     ),
                   ),
-                  const KaTabBarView(category: 'Cafe'),
-                  const KaTabBarView(category: 'Kedai'),
-                  const KaTabBarView(category: 'Penginapan'),
-                  const KaTabBarView(category: 'Camp'),
-                  const KaTabBarView(category: 'Taman'),
+                  const HomeTabBarView(category: 'Cafe'),
+                  const HomeTabBarView(category: 'Kedai'),
+                  const HomeTabBarView(category: 'Penginapan'),
+                  const HomeTabBarView(category: 'Camp'),
+                  const HomeTabBarView(category: 'Taman'),
                 ],
               ),
             ),
+            const SizedBox(height: 20.0),
+            const Text(
+              "Recomended",
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const RecomendedListPlace(),
           ],
         ),
       ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class KaItemContainer extends StatelessWidget {
+class HomeCategoryItem extends StatelessWidget {
   final Color? color;
   final String? title;
   final String? category;
-  const KaItemContainer({
+  const HomeCategoryItem({
     Key? key,
     required this.color,
     required this.title,
