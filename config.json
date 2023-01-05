@@ -1,6 +1,9 @@
 {
     "openai_key": "",
     "modules": [
-        "detail"
+        "navigation",
+        "bookmark",
+        "setting"
+
     ]
 }

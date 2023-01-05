@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/model/bottom_nav_bar_model.dart';
-import 'package:kambo_travel/module/home/view/home_view.dart';
 import 'package:kambo_travel/module/home/widget/home_bottom_navbar.dart';
 
 class TestSite extends StatefulWidget {

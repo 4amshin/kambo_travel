@@ -13,9 +13,9 @@ class SearchWidget extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
-            offset: const Offset(5, 5),
+            offset: const Offset(0, 5),
             blurRadius: 8,
-            spreadRadius: 4,
+            spreadRadius: 2,
           ),
         ],
       ),

@@ -27,35 +27,27 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
       vsync: this,
     );
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(
-          'Kambo Travel',
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 15),
-            child: Icon(
-              Icons.align_horizontal_center_sharp,
-              color: Colors.black,
-            ),
-          ),
-        ],
-      ),
       body: SafeArea(
-        minimum: const EdgeInsets.only(
-          left: 15,
-          right: 15,
-          bottom: 15,
-        ),
+        minimum: const EdgeInsets.all(15),
         child: ListView(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  'Kambo Travel',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Icon(
+                  Icons.align_horizontal_center_sharp,
+                  color: Colors.black,
+                ),
+              ],
+            ),
             const SizedBox(height: 10),
             const Text(
               "Where do you want to go?",
@@ -124,7 +116,6 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           ],
         ),
       ),
-      bottomNavigationBar: const HomeBottomNavbar(),
     );
   }
 }
