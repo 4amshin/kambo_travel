@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     Random random = Random();
     touristItem.shuffle(random);
-    TabController _tabController = TabController(
+    TabController tabController = TabController(
       length: 6,
       vsync: this,
     );
@@ -61,7 +61,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               "Categories",
               style: TextStyle(
                 fontSize: 18,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(
@@ -69,14 +69,14 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: HomeTabBar(
-                  controller: _tabController,
+                  controller: tabController,
                 ),
               ),
             ),
             SizedBox(
               height: 290,
               child: TabBarView(
-                controller: _tabController,
+                controller: tabController,
                 children: [
                   SizedBox(
                     child: ListView.builder(
@@ -105,8 +105,8 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             const Text(
               "Recomended",
               style: TextStyle(
-                fontSize: 15.0,
-                fontWeight: FontWeight.w500,
+                fontSize: 14.0,
+                fontWeight: FontWeight.w600,
               ),
             ),
             const RecomendedListPlace(),

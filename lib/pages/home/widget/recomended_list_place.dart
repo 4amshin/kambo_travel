@@ -41,7 +41,8 @@ class RecomendedListPlace extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: item.color,
                       image: DecorationImage(
-                        image: AssetImage(item.imgAsset!),
+                        image: AssetImage(
+                            item.imgAsset ?? 'assets/images/default.jpg'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: const BorderRadius.all(

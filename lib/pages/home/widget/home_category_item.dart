@@ -42,7 +42,10 @@ class HomeCategoryItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               color: color,
               image: DecorationImage(
-                  image: AssetImage(imgAsset!), fit: BoxFit.cover),
+                  image: AssetImage(
+                    imgAsset ?? 'assets/images/default.jpg',
+                  ),
+                  fit: BoxFit.cover),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
