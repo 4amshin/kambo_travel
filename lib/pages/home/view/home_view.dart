@@ -8,7 +8,6 @@ import 'package:kambo_travel/pages/home/widget/home_tab_bar.dart';
 import 'package:kambo_travel/pages/home/widget/home_tab_bar_view.dart';
 import 'package:kambo_travel/pages/home/widget/recomended_list_place.dart';
 import 'package:kambo_travel/pages/home/widget/search_widget.dart';
-import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -74,7 +73,6 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            const SizedBox(height: 15),
             SizedBox(
               height: 290,
               child: TabBarView(
@@ -104,7 +102,6 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            const SizedBox(height: 20.0),
             const Text(
               "Recomended",
               style: TextStyle(

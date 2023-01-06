@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/state_util.dart';
+import 'package:kambo_travel/mvc_properti/state_util.dart';
 import '../view/navigation_view.dart';
 
-class NavigationController extends State<NavigationView> implements MvcController {
+class NavigationController extends State<NavigationView>
+    implements MvcController {
   static late NavigationController instance;
   late NavigationView view;
 

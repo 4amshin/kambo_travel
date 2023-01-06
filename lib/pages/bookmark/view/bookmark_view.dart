@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/core.dart';
+import 'package:kambo_travel/mvc_properti/core.dart';
 import '../controller/bookmark_controller.dart';
 
 class BookmarkView extends StatefulWidget {
