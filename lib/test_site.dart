@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/module/home/widget/home_bottom_navbar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kambo_travel/pages/home/widget/home_bottom_navbar.dart';
 
 class TestSite extends StatefulWidget {
   const TestSite({Key? key}) : super(key: key);
@@ -12,23 +13,27 @@ class _TestSiteState extends State<TestSite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.indigo,
-        elevation: 0,
-        centerTitle: true,
-        title: const Text(
-          "Test Site",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        actions: const [],
-      ),
       body: SafeArea(
-        minimum: const EdgeInsets.all(15),
+        minimum: const EdgeInsets.only(
+          left: 15,
+          right: 15,
+          bottom: 10,
+          top: 5,
+        ),
         child: ListView(
           children: [
+            Row(
+              children: [
+                SvgPicture.asset(
+                  'assets/logo/kambo.svg',
+                  height: 40,
+                  color: Colors.indigo,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
             Container(
               height: 100.0,
               decoration: BoxDecoration(

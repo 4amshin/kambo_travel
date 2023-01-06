@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kambo_travel/core.dart';
+import 'package:kambo_travel/pages/bookmark/view/bookmark_view.dart';
+import 'package:kambo_travel/pages/home/view/home_view.dart';
+import 'package:kambo_travel/pages/navigation/view/navigation_view.dart';
+import 'package:kambo_travel/pages/setting/view/setting_view.dart';
 
 class HomeNavigation extends StatefulWidget {
   const HomeNavigation({Key? key}) : super(key: key);
@@ -31,7 +35,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
         ),
         height: size.width * .155,
         decoration: BoxDecoration(
-          color: Colors.indigo,
+          color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(.15),
@@ -69,7 +73,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
                     width: size.width * .080,
                     height: index == _selectedIndex ? size.width * .014 : 0,
                     decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.indigo,
                       borderRadius: BorderRadius.vertical(
                         bottom: Radius.circular(10),
                       ),
@@ -78,8 +82,9 @@ class _HomeNavigationState extends State<HomeNavigation> {
                   SvgPicture.asset(
                     item.svgAssest!,
                     height: _selectedIndex == index ? 25 : 20,
-                    color:
-                        _selectedIndex == index ? Colors.white : Colors.white60,
+                    color: _selectedIndex == index
+                        ? Colors.indigo
+                        : Colors.grey[300],
                   ),
                   SizedBox(height: size.width * .03),
                 ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kambo_travel/model/place_model.dart';
-import 'package:kambo_travel/module/home/widget/home_category_item.dart';
+import 'package:kambo_travel/pages/home/widget/home_category_item.dart';
+import 'package:kambo_travel/pages/home/widget/home_category_item.dart';
 
 class HomeTabBarView extends StatelessWidget {
   final String? category;
@@ -21,6 +22,8 @@ class HomeTabBarView extends StatelessWidget {
             return HomeCategoryItem(
               color: item.color,
               title: item.placeName,
+              imgAsset: item.imgAsset,
+              iconAsset: item.iconAsset,
               category: item.placeCategory,
             );
           } else {

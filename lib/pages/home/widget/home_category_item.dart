@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeCategoryItem extends StatelessWidget {
   final Color? color;
   final String? title;
   final String? category;
+  final String? imgAsset;
+  final String? iconAsset;
+
   const HomeCategoryItem({
     Key? key,
     required this.color,
     required this.title,
     required this.category,
+    required this.imgAsset,
+    required this.iconAsset,
   }) : super(key: key);
 
   @override
@@ -35,6 +41,8 @@ class HomeCategoryItem extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               color: color,
+              image: DecorationImage(
+                  image: AssetImage(imgAsset!), fit: BoxFit.cover),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
@@ -60,15 +68,16 @@ class HomeCategoryItem extends StatelessWidget {
                       title ?? 'Nama Tempat',
                       style: const TextStyle(
                         fontSize: 15,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     const SizedBox(height: 3),
                     Row(
                       children: [
-                        const Icon(
-                          Icons.house_rounded,
-                          size: 15,
-                          color: Colors.teal,
+                        SvgPicture.asset(
+                          iconAsset!,
+                          color: Colors.indigo,
+                          height: 13,
                         ),
                         const SizedBox(width: 5),
                         Text(
