@@ -30,6 +30,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
         minimum: const EdgeInsets.all(15),
         child: ListView(
           children: [
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -76,6 +77,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             SizedBox(
               height: 290,
               child: TabBarView(
+                physics: const BouncingScrollPhysics(),
                 controller: tabController,
                 children: [
                   SizedBox(

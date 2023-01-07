@@ -7,7 +7,7 @@ class RecomendedListPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90.0,
+      height: 100.0,
       child: ListView.builder(
         itemCount: touristItem.length,
         scrollDirection: Axis.horizontal,
