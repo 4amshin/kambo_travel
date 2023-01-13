@@ -29,7 +29,7 @@ class HomeTabBarView extends StatelessWidget {
                 );
               },
               child: HomeCategoryItem(
-                color: item.color,
+                heroTag: item.heroTag,
                 title: item.placeName,
                 imgAsset: item.imgAsset,
                 iconAsset: item.iconAsset,

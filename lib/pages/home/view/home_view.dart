@@ -98,7 +98,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                             );
                           },
                           child: HomeCategoryItem(
-                            color: item.color,
+                            heroTag: item.heroTag,
                             title: item.placeName,
                             category: item.placeCategory,
                             imgAsset: item.imgAsset,
@@ -110,7 +110,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   ),
                   const HomeTabBarView(category: 'Cafe'),
                   const HomeTabBarView(category: 'Kedai'),
-                  const HomeTabBarView(category: 'Penginapan'),
+                  const HomeTabBarView(category: 'HomeStay'),
                   const HomeTabBarView(category: 'Camp'),
                   const HomeTabBarView(category: 'Taman'),
                 ],

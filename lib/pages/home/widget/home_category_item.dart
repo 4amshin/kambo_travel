@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeCategoryItem extends StatelessWidget {
-  final Color? color;
   final String? title;
   final String? category;
   final String? imgAsset;
   final String? iconAsset;
+  final String? heroTag;
 
   const HomeCategoryItem({
     Key? key,
-    required this.color,
     required this.title,
     required this.category,
     required this.imgAsset,
     required this.iconAsset,
+    required this.heroTag,
   }) : super(key: key);
 
   @override
@@ -36,24 +36,26 @@ class HomeCategoryItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Container(
-            height: 180,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              color: color,
-              image: DecorationImage(
-                  image: AssetImage(
-                    imgAsset ?? 'assets/images/default.jpg',
+          Hero(
+            tag: heroTag!,
+            child: Container(
+              height: 180,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25),
+                image: DecorationImage(
+                    image: AssetImage(
+                      imgAsset ?? 'assets/images/default.jpg',
+                    ),
+                    fit: BoxFit.cover),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.6),
+                    offset: const Offset(0, 3),
+                    blurRadius: 10,
+                    spreadRadius: 1,
                   ),
-                  fit: BoxFit.cover),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.6),
-                  offset: const Offset(0, 3),
-                  blurRadius: 10,
-                  spreadRadius: 1,
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Padding(

@@ -30,7 +30,7 @@ class HomeTabBar extends StatelessWidget {
         Tab(text: "Semua"),
         Tab(text: "Cafe"),
         Tab(text: "Kedai"),
-        Tab(text: "Penginapan"),
+        Tab(text: "HomeStay"),
         Tab(text: "Camp"),
         Tab(text: "Taman"),
       ],
