@@ -29,29 +29,25 @@ class DvTopImage extends StatelessWidget {
           child: Container(
             height: 350.0,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
-                  offset: const Offset(0, 5),
-                  blurRadius: 15,
-                  spreadRadius: 5,
-                ),
-              ],
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(35),
+                bottomRight: Radius.circular(35),
+              ),
               image: DecorationImage(
                 image: AssetImage(
                   imgAsset ?? 'assets/images/default.jpg',
                 ),
                 fit: BoxFit.cover,
               ),
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(35),
-                bottomRight: Radius.circular(35),
-              ),
             ),
             child: Container(
               height: 350.0,
               width: double.maxFinite,
               decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(35),
+                  bottomRight: Radius.circular(35),
+                ),
                 gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
@@ -59,10 +55,6 @@ class DvTopImage extends StatelessWidget {
                     Colors.black.withOpacity(0.9),
                     Colors.transparent,
                   ],
-                ),
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(35),
-                  bottomRight: Radius.circular(35),
                 ),
               ),
             ),
@@ -76,8 +68,18 @@ class DvTopImage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              DvBackButton(
-                onTap: () => Navigator.pop(context),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  DvBackButton(
+                    onTap: () => Navigator.pop(context),
+                    icon: Icons.arrow_back_ios_new,
+                  ),
+                  DvBackButton(
+                    onTap: () => Navigator.pop(context),
+                    icon: Icons.bookmark,
+                  ),
+                ],
               ),
               const SizedBox(height: 220.0),
               Text(

@@ -11,16 +11,20 @@ class DvOpenHour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
-      width: 120,
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      height: 40,
+      width: 100,
+      padding: const EdgeInsets.only(
+        right: 5,
+        bottom: 2,
+        top: 2,
+      ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.indigo,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.2),
             blurRadius: 8,
-            offset: const Offset(0, 6),
+            offset: const Offset(0, 4),
           ),
         ],
         borderRadius: const BorderRadius.all(
@@ -29,39 +33,37 @@ class DvOpenHour extends StatelessWidget {
           ),
         ),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
+          SvgPicture.asset(
+            'assets/icon/jam.svg',
+            color: Colors.white,
+            height: 25,
+          ),
+          const SizedBox(width: 5),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                'assets/icon/jam.svg',
-                color: Colors.indigo,
-                height: 20,
-              ),
-              const SizedBox(width: 5),
-              const Text(
-                "Open Hour",
+              Text(
+                'Jam Buka',
                 style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.indigo,
+                  fontSize: 9,
+                  color: Colors.grey[400],
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Text(
+                openHour ?? '24 Jam',
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ],
-          ),
-          // const SizedBox(height: 3),
-          Padding(
-            padding: const EdgeInsets.only(left: 5),
-            child: Text(
-              openHour ?? "06 Am - 20 Pm",
-              style: const TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
           ),
         ],
       ),

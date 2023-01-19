@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 
 class DvBackButton extends StatelessWidget {
   final void Function()? onTap;
+  final IconData? icon;
   const DvBackButton({
     Key? key,
     required this.onTap,
+    required this.icon,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class DvBackButton extends StatelessWidget {
             child: Container(
               width: 40,
               height: 40,
-              padding: const EdgeInsets.only(right: 4),
+              // padding: const EdgeInsets.only(right: 1),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -42,8 +44,8 @@ class DvBackButton extends StatelessWidget {
                   end: AlignmentDirectional.bottomEnd,
                 ),
               ),
-              child: const Icon(
-                Icons.arrow_back_ios_new_rounded,
+              child: Icon(
+                icon,
                 color: Colors.white,
                 size: 20,
               ),
