@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kambo_travel/model/place_model.dart';
+import 'package:kambo_travel/pages/detail/view/detail_view.dart';
 import 'package:kambo_travel/pages/home/widget/home_category_item.dart';
 import 'package:kambo_travel/pages/home/widget/home_tab_bar.dart';
 import 'package:kambo_travel/pages/home/widget/home_tab_bar_view.dart';
@@ -86,19 +87,30 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       itemCount: touristItem.length,
                       itemBuilder: ((context, index) {
                         TouristPlace item = touristItem[index];
-                        return HomeCategoryItem(
-                          color: item.color,
-                          title: item.placeName,
-                          category: item.placeCategory,
-                          imgAsset: item.imgAsset,
-                          iconAsset: item.iconAsset,
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailView(
+                                        item: item,
+                                      )),
+                            );
+                          },
+                          child: HomeCategoryItem(
+                            heroTag: item.heroTag,
+                            title: item.placeName,
+                            category: item.placeCategory,
+                            imgAsset: item.imgAsset,
+                            iconAsset: item.iconAsset,
+                          ),
                         );
                       }),
                     ),
                   ),
                   const HomeTabBarView(category: 'Cafe'),
                   const HomeTabBarView(category: 'Kedai'),
-                  const HomeTabBarView(category: 'Penginapan'),
+                  const HomeTabBarView(category: 'HomeStay'),
                   const HomeTabBarView(category: 'Camp'),
                   const HomeTabBarView(category: 'Taman'),
                 ],

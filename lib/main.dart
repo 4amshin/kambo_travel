@@ -1,6 +1,7 @@
 import 'package:kambo_travel/home_navigation.dart';
 import 'package:kambo_travel/mvc_properti/state_util.dart';
 import 'package:flutter/material.dart';
+import 'package:kambo_travel/pages/detail/view/detail_view.dart';
 import 'package:kambo_travel/test_site.dart';
 
 void main() {
