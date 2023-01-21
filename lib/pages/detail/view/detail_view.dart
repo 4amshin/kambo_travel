@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kambo_travel/model/place_model.dart';
 import 'package:kambo_travel/pages/detail/widget/dv_activity_content.dart';
+import 'package:kambo_travel/pages/detail/widget/dv_facilities.dart';
+import 'package:kambo_travel/pages/detail/widget/dv_facility_item.dart';
 import 'package:kambo_travel/pages/detail/widget/dv_location_route.dart';
 import 'package:kambo_travel/pages/detail/widget/dv_open_hour.dart';
 import 'package:kambo_travel/pages/detail/widget/dv_rating_box.dart';
@@ -77,6 +79,9 @@ class DetailView extends StatefulWidget {
                   color: Colors.grey[400],
                 ),
                 const SizedBox(height: 15),
+                item.placeCategory == 'HomeStay'
+                    ? const DvFacilities()
+                    : Container(),
                 Text(
                   "Kamu dapat menikmati suasana yang tenang sambil menikmati hidangan yang disajikan di sini. Alang Puyuh Cafe merupakan pilihan yang tepat bagi kamu yang ingin menikmati kopi sambil menikmati pemandangan yang indah.",
                   textAlign: TextAlign.justify,
@@ -86,13 +91,6 @@ class DetailView extends StatefulWidget {
                   ),
                 ),
                 const SizedBox(height: 15.0),
-                const Text(
-                  "Gallery",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 15.0,
-                  ),
-                ),
                 const SizedBox(height: 5),
                 SizedBox(
                   height: 140,
