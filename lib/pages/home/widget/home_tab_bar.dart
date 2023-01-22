@@ -13,14 +13,23 @@ class HomeTabBar extends StatelessWidget {
     return TabBar(
       controller: controller,
       isScrollable: true,
-      indicator: DotIndicator(
+      indicatorPadding: const EdgeInsets.symmetric(
+        horizontal: 5,
+        vertical: 6,
+      ),
+      indicator: BoxDecoration(
         color: Colors.indigo,
-        distanceFromCenter: 15,
-        radius: 3,
-        paintingStyle: PaintingStyle.fill,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.indigoAccent.withOpacity(0.5),
+            offset: const Offset(0, 3),
+            blurRadius: 2,
+          ),
+        ],
       ),
       physics: const BouncingScrollPhysics(),
-      labelColor: Colors.indigo,
+      labelColor: Colors.white,
       indicatorColor: Colors.indigo,
       labelStyle: const TextStyle(
         fontWeight: FontWeight.w500,
