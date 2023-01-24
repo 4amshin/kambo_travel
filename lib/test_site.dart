@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/pages/home/widget/home_bottom_navbar.dart';
+import 'pages/home/widget/home_bottom_navbar.dart';
 
 class TestSite extends StatefulWidget {
   const TestSite({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/mvc_properti/core.dart';
+
 import '../controller/navigation_controller.dart';
 
 class NavigationView extends StatefulWidget {

@@ -22,7 +22,7 @@ class DvOpenHour extends StatelessWidget {
         color: Colors.indigo,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.indigoAccent.withOpacity(0.6),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),

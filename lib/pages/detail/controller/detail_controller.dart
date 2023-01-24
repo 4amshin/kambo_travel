@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/mvc_properti/state_util.dart';
+
+import '../../../mvc_properti/state_util.dart';
 import '../view/detail_view.dart';
 
 class DetailController extends State<DetailView> implements MvcController {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/model/bottom_nav_bar_model.dart';
+import '../../../model/bottom_nav_bar_model.dart';
 
 class HomeBottomNavbar extends StatefulWidget {
   const HomeBottomNavbar({Key? key}) : super(key: key);

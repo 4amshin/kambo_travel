@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/mvc_properti/core.dart';
+
 import '../controller/setting_controller.dart';
 
 class SettingView extends StatefulWidget {

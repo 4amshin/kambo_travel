@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/mvc_properti/state_util.dart';
+import '../../../mvc_properti/state_util.dart';
 import '../view/bookmark_view.dart';
 
 class BookmarkController extends State<BookmarkView> implements MvcController {

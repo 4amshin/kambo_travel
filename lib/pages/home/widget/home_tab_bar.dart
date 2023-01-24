@@ -19,7 +19,7 @@ class HomeTabBar extends StatelessWidget {
       ),
       indicator: BoxDecoration(
         color: Colors.indigo,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(13),
         boxShadow: [
           BoxShadow(
             color: Colors.indigoAccent.withOpacity(0.5),

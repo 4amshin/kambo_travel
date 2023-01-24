@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/model/place_model.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_activity_content.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_facilities.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_facility_item.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_location_route.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_open_hour.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_rating_box.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_top_image.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_top_picture.dart';
+import '../../../model/place_model.dart';
+import '../widget/dv_activity_content.dart';
+import '../widget/dv_facilities.dart';
+import '../widget/dv_facility_item.dart';
+import '../widget/dv_location_route.dart';
+import '../widget/dv_open_hour.dart';
+import '../widget/dv_rating_box.dart';
+import '../widget/dv_top_image.dart';
+import '../widget/dv_top_picture.dart';
 import '../controller/detail_controller.dart';
 
 class DetailView extends StatefulWidget {
@@ -76,7 +76,7 @@ class DetailView extends StatefulWidget {
                 const SizedBox(height: 17),
                 Container(
                   height: 2,
-                  color: Colors.grey[400],
+                  color: Colors.indigo,
                 ),
                 const SizedBox(height: 15),
                 item.placeCategory == 'HomeStay'
@@ -87,11 +87,17 @@ class DetailView extends StatefulWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 11.5,
-                    color: Colors.grey[600],
+                    color: Colors.grey[700],
                   ),
                 ),
                 const SizedBox(height: 15.0),
-                const SizedBox(height: 5),
+                const Text(
+                  "Galeri",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15.0,
+                  ),
+                ),
                 SizedBox(
                   height: 140,
                   child: ListView(

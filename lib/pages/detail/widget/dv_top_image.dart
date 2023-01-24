@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_back_button.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_rating_box.dart';
+import 'dv_back_button.dart';
+import 'dv_rating_box.dart';
 
 class DvTopImage extends StatelessWidget {
   final String? title;

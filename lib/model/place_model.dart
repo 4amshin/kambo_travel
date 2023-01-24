@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
-
 class TouristPlace {
   final String? placeName;
   final String? placeCategory;
   final String? heroTag;
   final String? rating;
+  bool? isRecommend = false;
   final String? openHour;
   final String? imgAsset;
   final String? iconAsset;
@@ -14,6 +13,7 @@ class TouristPlace {
     required this.placeCategory,
     required this.heroTag,
     required this.rating,
+    this.isRecommend,
     this.openHour,
     this.imgAsset,
     required this.iconAsset,
@@ -26,6 +26,7 @@ List<TouristPlace> touristItem = [
     placeCategory: 'Cafe',
     heroTag: 'pesona',
     rating: '4,5',
+    isRecommend: true,
     openHour: '07 - 22',
     imgAsset: 'assets/images/pesona.jpg',
     iconAsset: 'assets/icon/cafe.svg',
@@ -35,6 +36,7 @@ List<TouristPlace> touristItem = [
     placeCategory: 'Cafe',
     heroTag: 'alang',
     rating: '4,0',
+    isRecommend: true,
     openHour: '07 - 22',
     imgAsset: 'assets/images/alang.jpg',
     iconAsset: 'assets/icon/cafe.svg',
@@ -44,6 +46,7 @@ List<TouristPlace> touristItem = [
     placeCategory: 'Cafe',
     heroTag: 'malika',
     rating: '4,0',
+    isRecommend: true,
     openHour: '07 - 22',
     imgAsset: 'assets/images/malika.jpg',
     iconAsset: 'assets/icon/cafe.svg',
@@ -89,6 +92,7 @@ List<TouristPlace> touristItem = [
     placeCategory: 'HomeStay',
     heroTag: 'nene',
     rating: '4,5',
+    isRecommend: true,
     imgAsset: 'assets/images/nene.jpg',
     iconAsset: 'assets/icon/hotel.svg',
   ),

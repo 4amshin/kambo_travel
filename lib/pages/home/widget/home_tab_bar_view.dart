@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/model/place_model.dart';
-import 'package:kambo_travel/pages/detail/view/detail_view.dart';
-import 'package:kambo_travel/pages/home/widget/home_category_item.dart';
+import '../../../model/place_model.dart';
+import '../../detail/view/detail_view.dart';
+import 'home_category_item.dart';
 
 class HomeTabBarView extends StatelessWidget {
   final String? category;

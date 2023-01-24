@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/mvc_properti/state_util.dart';
+
+import '../../../mvc_properti/state_util.dart';
 import '../view/navigation_view.dart';
 
 class NavigationController extends State<NavigationView>

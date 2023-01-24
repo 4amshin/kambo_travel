@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_back_button.dart';
+import 'dv_back_button.dart';
 
 class DvTopPicture extends StatelessWidget {
   final String? heroTag;

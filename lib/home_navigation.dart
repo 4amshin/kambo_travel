@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/mvc_properti/core.dart';
-import 'package:kambo_travel/pages/bookmark/view/bookmark_view.dart';
-import 'package:kambo_travel/pages/home/view/home_view.dart';
-import 'package:kambo_travel/pages/navigation/view/navigation_view.dart';
-import 'package:kambo_travel/pages/setting/view/setting_view.dart';
+import 'mvc_properti/core.dart';
+import 'pages/bookmark/view/bookmark_view.dart';
+import 'pages/home/view/home_view.dart';
+import 'pages/navigation/view/navigation_view.dart';
+import 'pages/setting/view/setting_view.dart';
 
 class HomeNavigation extends StatefulWidget {
   const HomeNavigation({Key? key}) : super(key: key);

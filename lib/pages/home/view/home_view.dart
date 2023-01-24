@@ -2,13 +2,15 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kambo_travel/model/place_model.dart';
-import 'package:kambo_travel/pages/detail/view/detail_view.dart';
-import 'package:kambo_travel/pages/home/widget/home_category_item.dart';
-import 'package:kambo_travel/pages/home/widget/home_tab_bar.dart';
-import 'package:kambo_travel/pages/home/widget/home_tab_bar_view.dart';
-import 'package:kambo_travel/pages/home/widget/recomended_list_place.dart';
-import 'package:kambo_travel/pages/home/widget/search_widget.dart';
+import 'package:kambo_travel/pages/home/widget/top_app_title.dart';
+
+import '../../../model/place_model.dart';
+import '../../detail/view/detail_view.dart';
+import '../widget/home_category_item.dart';
+import '../widget/home_tab_bar.dart';
+import '../widget/home_tab_bar_view.dart';
+import '../widget/recommended_list_place.dart';
+import '../widget/search_widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -32,21 +34,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
         child: ListView(
           children: [
             const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SvgPicture.asset(
-                  'assets/logo/kambo.svg',
-                  height: 30,
-                  color: Colors.indigo,
-                ),
-                SvgPicture.asset(
-                  'assets/icon/direct-up.svg',
-                  height: 20,
-                  color: Colors.indigo,
-                ),
-              ],
-            ),
+            const TopAppTitle(),
             const SizedBox(height: 10),
             const Text(
               "Where do you want to go?",
@@ -123,7 +111,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            const RecomendedListPlace(),
+            const RecommendedListPlace(),
           ],
         ),
       ),

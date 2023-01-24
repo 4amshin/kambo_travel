@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kambo_travel/pages/detail/widget/dv_facility_item.dart';
+import 'dv_facility_item.dart';
 
 class DvFacilities extends StatelessWidget {
   final String? room;
