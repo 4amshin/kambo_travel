@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kambo_travel/pages/detail/widget/dv_menu_category.dart';
 import '../../../model/place_model.dart';
 import '../widget/dv_activity_content.dart';
 import '../widget/dv_facilities.dart';
@@ -82,6 +83,10 @@ class DetailView extends StatefulWidget {
                 item.placeCategory == 'HomeStay'
                     ? const DvFacilities()
                     : Container(),
+                item.placeCategory == 'Cafe/Resto'
+                    ? const DvMenuCategory()
+                    : Container(),
+                const SizedBox(height: 10.0),
                 Text(
                   "Kamu dapat menikmati suasana yang tenang sambil menikmati hidangan yang disajikan di sini. Alang Puyuh Cafe merupakan pilihan yang tepat bagi kamu yang ingin menikmati kopi sambil menikmati pemandangan yang indah.",
                   textAlign: TextAlign.justify,

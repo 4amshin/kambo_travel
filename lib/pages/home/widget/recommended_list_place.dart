@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../model/place_model.dart';
 import '../../detail/view/detail_view.dart';
 
@@ -71,7 +72,8 @@ class RecommendedListPlace extends StatelessWidget {
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
-                                fontSize: 10.0,
+                                height: 1.2,
+                                fontSize: 11,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -82,7 +84,7 @@ class RecommendedListPlace extends StatelessWidget {
                               style: const TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w400,
-                                fontSize: 8.0,
+                                fontSize: 8,
                               ),
                             ),
                           ],

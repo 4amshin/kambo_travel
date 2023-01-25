@@ -49,7 +49,7 @@ class DvFacilityItem extends StatelessWidget {
             child: SvgPicture.asset(
               iconAssets ?? 'assets/icon/default.svg',
               height: 33,
-              color: Colors.black38,
+              color: Colors.black54,
             ),
           ),
           const SizedBox(width: 8),

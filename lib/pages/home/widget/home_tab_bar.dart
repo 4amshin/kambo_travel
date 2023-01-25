@@ -1,5 +1,5 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomeTabBar extends StatelessWidget {
   final TabController? controller;
@@ -13,10 +13,13 @@ class HomeTabBar extends StatelessWidget {
     return TabBar(
       controller: controller,
       isScrollable: true,
+      indicatorSize: TabBarIndicatorSize.tab,
       indicatorPadding: const EdgeInsets.symmetric(
         horizontal: 5,
         vertical: 6,
       ),
+      dragStartBehavior: DragStartBehavior.down,
+      dividerColor: Colors.transparent,
       indicator: BoxDecoration(
         color: Colors.indigo,
         borderRadius: BorderRadius.circular(13),
@@ -24,7 +27,7 @@ class HomeTabBar extends StatelessWidget {
           BoxShadow(
             color: Colors.indigoAccent.withOpacity(0.5),
             offset: const Offset(0, 3),
-            blurRadius: 2,
+            blurRadius: 3,
           ),
         ],
       ),
@@ -37,8 +40,7 @@ class HomeTabBar extends StatelessWidget {
       unselectedLabelColor: Colors.grey[400],
       tabs: const [
         Tab(text: "Semua"),
-        Tab(text: "Cafe"),
-        Tab(text: "Kedai"),
+        Tab(text: "Cafe/Resto"),
         Tab(text: "HomeStay"),
         Tab(text: "Camp"),
         Tab(text: "Taman"),

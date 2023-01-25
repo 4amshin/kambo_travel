@@ -1,0 +1,12 @@
+when cafe get clicked it shows
+title text = Menu
+listView builder of menu title like
+food, jus, hotdrink, coldDrink, snack,
+
+find the icon for every one of the title above
+
+for every container of the title menu above get clicked
+then it show list of menu in pop up container that dissapear when
+screen get clicked anywere. using BottomSheet Widget
+
+make a list of image in place_model for the galery in detail view
