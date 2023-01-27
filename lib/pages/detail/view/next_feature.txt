@@ -10,3 +10,11 @@ then it show list of menu in pop up container that dissapear when
 screen get clicked anywere. using BottomSheet Widget
 
 make a list of image in place_model for the galery in detail view
+every cafe have a list of 
+food [
+foodTitle, foodImg
+]
+same goes for the others
+
+GET THE GALLERY IMAGE IN GOOGLE MAP 
+AND EDIT IT IN PHOTOSHOP

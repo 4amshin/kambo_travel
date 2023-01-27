@@ -1,8 +1,7 @@
 import 'home_navigation.dart';
 import 'mvc_properti/state_util.dart';
 import 'package:flutter/material.dart';
-import 'pages/detail/view/detail_view.dart';
-import 'test_site.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Kambo Travel',
       navigatorKey: Get.navigatorKey,
       theme: ThemeData(
-        fontFamily: 'Poppins',
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),

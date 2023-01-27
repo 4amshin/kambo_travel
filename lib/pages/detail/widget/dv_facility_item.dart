@@ -12,57 +12,93 @@ class DvFacilityItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 110,
-      margin: const EdgeInsets.symmetric(
-        vertical: 7,
-        horizontal: 7,
-      ),
-      padding: const EdgeInsets.symmetric(
-        vertical: 4,
-        horizontal: 4,
-      ),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.08),
-            offset: const Offset(0, 2),
-            blurRadius: 5,
-          ),
-        ],
-        borderRadius: const BorderRadius.all(
-          Radius.circular(14),
+    return GestureDetector(
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              height: 400,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15,
+                vertical: 20,
+              ),
+              decoration: const BoxDecoration(
+                color: Colors.indigo,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
+              ),
+              child: Column(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(
+                      Icons.close,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+      child: Container(
+        width: 110,
+        margin: const EdgeInsets.symmetric(
+          vertical: 7,
+          horizontal: 7,
         ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 45,
-            padding: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              borderRadius: const BorderRadius.all(
-                Radius.circular(12),
+        padding: const EdgeInsets.symmetric(
+          vertical: 4,
+          horizontal: 4,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.08),
+              offset: const Offset(0, 2),
+              blurRadius: 5,
+            ),
+          ],
+          borderRadius: const BorderRadius.all(
+            Radius.circular(14),
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 45,
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              child: SvgPicture.asset(
+                iconAssets ?? 'assets/icon/default.svg',
+                height: 33,
+                color: Colors.black54,
               ),
             ),
-            child: SvgPicture.asset(
-              iconAssets ?? 'assets/icon/default.svg',
-              height: 33,
-              color: Colors.black54,
+            const SizedBox(width: 8),
+            Text(
+              content ?? "Text",
+              style: const TextStyle(
+                height: 1,
+                fontSize: 12.0,
+                color: Colors.black54,
+                fontWeight: FontWeight.w600,
+              ),
             ),
-          ),
-          const SizedBox(width: 8),
-          Text(
-            content ?? "Text",
-            style: const TextStyle(
-              height: 1,
-              fontSize: 12.0,
-              color: Colors.black54,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
     Random random = Random();
     touristItem.shuffle(random);
     TabController tabController = TabController(
-      length: 6,
+      length: 5,
       vsync: this,
     );
     return Scaffold(
