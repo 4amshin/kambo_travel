@@ -33,7 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.6
-  google_fonts: ^4.0.0
+  google_fonts: ^5.1.0
   tab_indicator_styler: ^2.0.0
 
 dev_dependencies:
